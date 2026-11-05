@@ -1,0 +1,39 @@
+##################################################################
+# Set physics models and interaction opitons
+##################################################################
+
+/LunarNeutronsMC/physics/addPhysics QGSP_BIC_HP
+/run/initialize
+
+##################################################################
+# Set output options
+##################################################################
+
+/LunarNeutronsMC/analysis/setOutputFile vis_test.txt
+
+##################################################################
+# Set visualisation options
+##################################################################
+
+/vis/scene/create
+/vis/open OGLI 800x800-0+0
+/vis/viewer/set/viewpointThetaPhi 20 120
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate
+/vis/viewer/select viewer-0
+/vis/viewer/rebuild
+
+##################################################################
+
+/gps/particle proton
+/gps/ang/type cos
+/gps/ang/mintheta 0.00 deg
+/gps/ang/maxtheta 90.00 deg
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/centre 0. 0. 0. m
+/gps/pos/radius 3.0 m
+/gps/energy 50 MeV
+
+/run/beamOn 1
+

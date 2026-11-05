@@ -1,0 +1,27 @@
+/LunarNeutronsMC/physics/addPhysics QGSP_BIC_HP
+/run/initialize
+/LunarNeutronsMC/analysis/setOutputFile moon_protons_2000.txt
+/gps/particle proton
+/gps/ang/type cos
+/gps/ang/mintheta 0.00 deg
+/gps/ang/maxtheta 90.00 deg
+/gps/pos/type Point
+/gps/pos/centre 0. 0. 10.1 m
+#/gps/energy 1000000 MeV
+
+/gps/ene/diffspec true
+/gps/ene/type Arb
+/gps/ene/min 1.0 MeV
+/gps/ene/max 1000000 MeV
+/gps/hist/type arb
+/gps/hist/point 1.0       7.96E-06
+/gps/hist/point 10.0      7.72E-06
+/gps/hist/point 100.0     5.79E-05
+/gps/hist/point 1000.0    8.13E-05
+/gps/hist/point 10000.0   1.94E-06
+/gps/hist/point 100000.0  5.43E-09
+/gps/hist/point 1000000.0 1.27E-11
+
+/gps/hist/inter Lin
+
+/run/beamOn 2000
